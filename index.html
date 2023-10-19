@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAP OPEN LAYERS</title>
-	<link rel="stylesheet" href="./css/style.css" type="text/css" />
-	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <title>Cloud Function dan MongoDB</title>
+    <link rel="stylesheet" href="../chapter3/css/style.css" type="text/css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 </head>
 
 <body>
-    
-    <div>
-        <h1>OPEN LAYERS GIS</h1>
-    </div>
+
     <div class="intro">
-        <h2>Nama    : Fahad Abdul Aziz (1214030)</h2>
-        <h2>Kelas   : D4 Teknik Informatika 3A</h2>
-    </div>
+        <h3>Fahad Abdul Aziz - 1214030</h3>
+        <h3>D4 Teknik Informatika 3A</h3>
+    </div><br>
 
     <div id='map'></div>
 
@@ -44,55 +42,52 @@
             <button id="insertmarkerbutton" type="button">Input</button><br>
         </div>
     </div>
-
-
-    <div id = "info-table>
+    <div id="info-table">
         <div class="point-table">
-            <!-- MEMBUAT DISPLAY TABLE DATA POINT BUAT JSON -->
-            <h1>Data Poin</h1>
+            <br>
+            <h3 style="text-align: center;">Data Point</h3>
             <table id="pointTable" border="1">
                 <thead>
                     <tr>
-                        <th>No</th>
                         <th>Nama</th>
                         <th>Koordinat</th>
                         <th>Type</th>
                     </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody id="waypointbody"></tbody>
             </table>
         </div>
-        
-        <div class="polygon-table">
-            <h1>Data Polygon</h1>
+
+        <div class="polygon-table"><br>
+            <h3 style="text-align: center;">Data Polygon</h3>
             <table id="polygonTable" border="1">
                 <thead>
                     <tr>
-                        <th>No</th>
                         <th>Nama</th>
                         <th>Koordinat</th>
                         <th>Type</th>
                     </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody id="polygonbody"></tbody>
             </table>
         </div>
-        
-        <div class="polyline-table">
-            <h1>Data Polyline</h1>      
+
+        <div class="polyline-table"><br>
+            <h3 style="text-align: center;">Data LineString</h3>
             <table id="polylineTable" border="1">
                 <thead>
                     <tr>
-                        <th>No</th>
                         <th>Nama</th>
-                        <th>Koordinat</th>  
+                        <th>Koordinat</th>
                         <th>Type</th>
                     </tr>
                 </thead>
-                <tbody></tbody>
+                <tbody id="polylinebody"></tbody>
             </table>
         </div>
     </div>
-    <script src="./js/main.js" type="module"></script>  
+    <script src="https://cdn.jsdelivr.net/npm/ol@v8.1.0/dist/ol.js"></script>
+    <script type="module" src="./js/main.js"></script>
 </body>
+
 </html>
